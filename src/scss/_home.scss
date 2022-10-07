@@ -52,13 +52,13 @@
 
     }
     33% {
-        transform: rotatez(20deg);
+        transform: rotatez(15deg);
     }
     66% {
-        transform: rotatez(-40deg)
+        transform: rotatez(-15deg)
     }
     100% {
-        transform: rotatez(20deg);
+        transform: rotatez(0deg);
     }
 }
 
@@ -67,6 +67,7 @@
     right:-10vw;
     height: 150vh;
     width: 80vw;
+    min-width: 700px;
     position: absolute;
     background: $light-orange-color;
     border-radius: 50%;
@@ -77,10 +78,10 @@
 
         align-self: flex-end;
         height: 50vh;
-        width: 45vw;
+        width: 50vw;
         position: absolute;
-        animation: 10s anim2 linear forwards infinite;
-
+        animation: 10s anim2 linear infinite;
+        min-width: 500px;
     }
 
 }
