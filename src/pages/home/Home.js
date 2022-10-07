@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../../components/Card'
 import Header from '../../components/Header'
+import Dish1 from '../../assets/images/dish1.png'
+import ToggleImg from "../../assets/images/toggle.png"
+import FoodWheelImg from "../../assets/images/foodwheel.png"
 
 const Home = () => {
 
@@ -24,8 +27,20 @@ const Home = () => {
   return (
     <div className='home'>
       <Header />
-      <Card {...foodData[currentCard]}/>
+      <Card {...foodData[currentCard]} />
       <p className='text-abs'>Watch the Video</p>
+      {/*Absolute Designs */}
+      <div className="giant-circle">
+      <img src={FoodWheelImg} className='food-wheel' />
+      </div>
+
+
+
+      <div className='center-dish-div'>
+        <img src={ToggleImg} />
+        <img src={Dish1} className='center-dish' />
+        <img src={ToggleImg} />
+      </div>
     </div>
   )
 }
