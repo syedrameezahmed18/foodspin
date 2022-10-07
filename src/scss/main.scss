@@ -1,8 +1,14 @@
 @import "./mixins";
 @import "./constants";
 @import "./home";
+@import "./components/header";
+@import "./components/card";
 
 * {
     box-sizing: border-box;
     margin: 0px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
 }

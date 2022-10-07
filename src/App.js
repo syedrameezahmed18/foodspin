@@ -1,10 +1,16 @@
 import logo from './logo.svg';
-import './App.css';
+import './scss/main.scss';
 import Navigation from './navigation/Navigation';
+import { ScreenProvider } from './context/ScreenContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <Navigation />
+    <ThemeProvider>
+      <ScreenProvider>
+        <Navigation />
+      </ScreenProvider>
+    </ThemeProvider>
   );
 }
 

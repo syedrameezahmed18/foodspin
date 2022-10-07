@@ -1,14 +1,14 @@
 import React, { useState, createContext } from "react"
 
-export const ScreenContext = createContext()
+export const ThemeContext = createContext()
 
-export const ScreenProvider = props => {
+export const ThemeProvider = props => {
 
     const [themeColor, setThemeColor] = useState("")
 
     return (
-        <ScreenContext.Provider value={{ themeColor, setThemeColor }}>
+        <ThemeContext.Provider value={{ themeColor, setThemeColor }}>
             {props.children}
-        </ScreenContext.Provider>
+        </ThemeContext.Provider>
     )
 }

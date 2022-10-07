@@ -3,8 +3,10 @@ import React, { useState, useEffect, createContext } from "react"
 export const ScreenContext = createContext()
 
 export const ScreenProvider = props => {
-    //default value admin
+
     const [size, setSize] = useState(window.innerWidth)
+
+    console.log('here size',size)
 
     useEffect(() => {
         function handleResize() {
@@ -15,10 +17,8 @@ export const ScreenProvider = props => {
         return () => window.removeEventListener("resize", handleResize);
     })
 
-    // it can be home || campaign || test || contacts || staff || profile || settings
-
     return (
-        <ScreenContext.Provider value={{ size }}>
+        <ScreenContext.Provider value={{ size, setSize }}>
             {props.children}
         </ScreenContext.Provider>
     )

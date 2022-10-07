@@ -1,0 +1,44 @@
+.main-card {
+    position: absolute;
+    left: 10%;
+    top: 40vh;
+    width: 30vw;
+    max-width: 550px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:10px;
+
+    .o-price {
+        font-size: 30px;
+        font-weight: 600;
+        color: $orange-color;
+    }
+
+    p {
+        &:nth-child(2) {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        &:nth-child(3) {
+            font-size: 14px;
+        }
+    }
+
+    .orange-btn {
+        padding: 10px 20px 10px 20px;
+        border-radius: 30px;
+        background: $orange-color;
+        color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
