@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = ({price, title, description}) => {
+const Card = ({id,price, title, description}) => {
   return (
-    <div className="main-card">
+    <div className={`${id === 0 ? 'main-card':'main-card-green'}`}>
         <p className={'o-price'}>{price}</p>
-        <p>{title}</p>
-        <p>{description}</p>
+        <p className="title">{title}</p>
+        <p className="desc">{description}</p>
         <p className={'orange-btn'}>ORDER NOW</p>
     </div>
   )

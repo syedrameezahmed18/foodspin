@@ -82,7 +82,29 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
-            animation: 10s anim2 linear infinite;
+            transform: translate(-50%, -50%) ;
+
+            animation: 2s anim2 linear infinite;
+            min-width: 500px;
+        }
+    }
+    .giant-circle-green {
+        height: 70%;
+        width: 100%;
+        position: absolute;
+        background: $light-green-color;
+        border-radius: 50%;
+        z-index: -2;
+        @include FlexMixin(row, center, flex-end);
+
+        .food-wheel {
+            align-self: flex-end;
+            height: 50vh;
+            width: 40vw;
+            position: absolute;
+            transform: translate(-50%, -50%) ;
+
+            animation: 2s anim2 linear infinite;
             min-width: 500px;
         }
     }
