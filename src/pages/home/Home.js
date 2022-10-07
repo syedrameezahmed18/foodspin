@@ -30,16 +30,15 @@ const Home = () => {
       <Card {...foodData[currentCard]} />
       <p className='text-abs'>Watch the Video</p>
       {/*Absolute Designs */}
-      <div className="giant-circle">
-      <img src={FoodWheelImg} className='food-wheel' />
-      </div>
-
-
-
-      <div className='center-dish-div'>
-        <img src={ToggleImg} />
-        <img src={Dish1} className='center-dish' />
-        <img src={ToggleImg} />
+      <div className="major-abs">
+        <div className="giant-circle">
+          <img src={FoodWheelImg} className='food-wheel' />
+        </div>
+        <div className='center-dish-div'>
+          <img src={ToggleImg} />
+          <img src={Dish1} className='center-dish' />
+          <img src={ToggleImg} />
+        </div>
       </div>
     </div>
   )

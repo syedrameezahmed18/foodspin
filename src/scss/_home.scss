@@ -1,11 +1,10 @@
-
 .home {
-    z-index:0
+    z-index: 0;
 }
 .text-abs {
     position: absolute;
     bottom: 20px;
-    left:10%;
+    left: 10%;
 }
 
 @keyframes rotateAxis {
@@ -42,90 +41,85 @@
     100% {
         transform: rotatez(360deg);
     }
-
-
 }
 
 @keyframes anim2 {
     0% {
         transform: rotatez(0deg);
-
     }
     33% {
         transform: rotatez(15deg);
     }
     66% {
-        transform: rotatez(-15deg)
+        transform: rotatez(-15deg);
     }
     100% {
         transform: rotatez(0deg);
     }
 }
 
-.giant-circle {
-    top:-80vh;
-    right:-10vw;
-    height: 150vh;
+.major-abs {
+    position: absolute;
+    top: -100vh;
+    right: -10vw;
+
+    height: 200vh;
     width: 80vw;
     min-width: 700px;
-    position: absolute;
-    background: $light-orange-color;
-    border-radius: 50%;
-    z-index: -2;
-    @include FlexMixin(row,center,flex-end);
+    @include FlexMixin(column, space-around, center);
 
-    .food-wheel {
-
-        align-self: flex-end;
-        height: 50vh;
-        width: 50vw;
+    .giant-circle {
+        height: 70%;
+        width: 100%;
         position: absolute;
-        animation: 10s anim2 linear infinite;
-        min-width: 500px;
+        background: $light-orange-color;
+        border-radius: 50%;
+        z-index: -2;
+        @include FlexMixin(row, center, flex-end);
+
+        .food-wheel {
+            align-self: flex-end;
+            height: 50vh;
+            width: 40vw;
+            position: absolute;
+            animation: 10s anim2 linear infinite;
+            min-width: 500px;
+        }
     }
 
-}
+    .center-dish-div {
+        margin-top: 140vh;
 
+        height: 200px;
+        width: 40vw;
+        min-width: 300px;
+        max-width: 700px;
 
+        @include FlexMixin(row, space-between, flex-end);
 
-.center-dish-div {
-    z-index:0;
-    position: absolute;
-    top: 55vh;
-    right:10vw;
-    height: 200px;
-    width: 40vw;
-    min-width: 300px;
-    max-width: 700px;
-
-
-    @include FlexMixin(row,space-between,flex-end);
-
-    @media (min-width:1500px) {
-        height: 300px;
-
-    }
-
-    .center-dish {
-        height:200px;
-        width:200px;
-
-        @media (min-width:1500px) {
+        @media (min-width: 1500px) {
             height: 300px;
-            width: 300px;
+        }
+
+        .center-dish {
+            height: 200px;
+            width: 200px;
+
+            @media (min-width: 1500px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
+
+        img {
+            height: 80px;
+            width: 80px;
+            cursor: pointer;
+
+            @media (min-width: 1500px) {
+                height: 100px;
+                width: 100px;
+            }
         }
     }
-
-    img {
-        height: 80px;
-        width:80px;
-        cursor: pointer;
-
-        @media (min-width:1500px) {
-            height: 100px;
-            width: 100px;
-        }
-    }
-
 }
-
