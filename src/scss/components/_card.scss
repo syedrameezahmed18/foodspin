@@ -164,6 +164,11 @@
     align-items: flex-start;
     gap: 10px;
 
+    @media (min-width:1500px) {
+        gap:20px;
+    }
+
+
     .o-price {
         font-size: 30px;
         font-weight: 600;
@@ -229,6 +234,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+    @media (min-width:1500px) {
+        gap:20px;
+    }
+
 
     .o-price {
         font-size: 30px;

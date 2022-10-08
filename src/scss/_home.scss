@@ -112,6 +112,9 @@
     min-width: 700px;
     @include FlexMixin(column, space-around, center);
 
+    @media (min-width:1500px) {
+        right:-15vw
+    }
     .giant-circle {
         height: 70%;
         width: 100%;
@@ -126,10 +129,11 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
+            max-width: 650px;
 
-
-
-            min-width: 500px;
+            @media (min-width:1500px) {
+                height: 40vh;
+            }
         }
 
     }
@@ -147,10 +151,12 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
+            max-width: 650px;
 
+            @media (min-width:1500px) {
+                height: 40vh;
+            }
 
-
-            min-width: 500px;
         }
 
 
