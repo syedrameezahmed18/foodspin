@@ -13,6 +13,7 @@ const Home = () => {
 
 
   const { themeColor, setThemeColor } = useContext(ThemeContext)
+  const { size, setSize } = useContext(ScreenContext)
 
   const [foodData, setFoodData] = useState([
     {
@@ -28,13 +29,7 @@ const Home = () => {
       description: 'It is a non vegetarian salad which consists of the green goddess dressing mixed with chicken, peppers, olives and celery. '
     }
   ])
-
-  const {size, setSize} = useContext(ScreenContext)
-
   const [currentCard, setCurrentCard] = useState(0)
-  const DishRef = useRef(null)
-  const DishRef2 = useRef(null)
-
 
   useEffect(() => {
     const Interval = setInterval(() => {
@@ -53,23 +48,19 @@ const Home = () => {
     }
   }, [currentCard])
 
-  console.log('theme is', themeColor, 'curr os', currentCard)
-
   const toggler = () => {
     if (currentCard === 0) {
       setCurrentCard(1)
-      DishRef.current.classList.remove("dish-anim")
-      DishRef2.current.classList.add("dish-anim")
+
     }
     else {
       setCurrentCard(0)
-      DishRef.current.classList.add("dish-anim")
-      DishRef2.current.classList.remove("dish-anim")
+
     }
   }
 
   return (
-    <div className={`${currentCard === 0 ? 'home':'home-green'}`}>
+    <div className={`${currentCard === 0 ? 'home' : 'home-green'}`}>
       <Header />
       <Card {...foodData[currentCard]} />
       {
@@ -87,9 +78,9 @@ const Home = () => {
               <img onClick={toggler} src={currentCard === 0 ? ToggleImg : ToggleGreen} />
               {
                 currentCard === 0 ? (
-                  <img ref={DishRef} src={Dish1} className={`center-dish`} />
+                  <img  src={Dish1} className={`center-dish`} />
                 ) : (
-                  <img ref={DishRef2} src={Dish2} className={`center-dish`} />
+                  <img src={Dish2} className={`center-dish`} />
                 )
               }
 
