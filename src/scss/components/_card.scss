@@ -83,6 +83,39 @@
 
     }
 }
+@keyframes anim-pure-2 {
+    0% {
+        transform: scale(1, 1);
+
+    }
+    13% {
+        transform: scale(0.8, 0.8);
+    }
+    26% {
+        transform: scale(0.5, 0.5);
+    }
+    39% {
+        transform: scale(0.2, 0.5);
+    }
+
+    52% {
+        transform: scale(0, 0);
+    }
+
+    65% {
+        transform: scale(0.2, 0.5);
+    }
+    78% {
+        transform: scale(0.5, 0.5);
+    }
+    90% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+
+    }
+}
 
 @keyframes anim-green {
     0% {
@@ -193,13 +226,13 @@
     .title {
         font-size: 32px;
         font-weight: 600;
-        animation: anim-pure 500ms linear forwards;
+        animation: anim-pure-2 500ms linear forwards;
 
     }
 
     .desc {
         font-size: 14px;
-        animation: anim-pure 500ms linear forwards;
+        animation: anim-pure-2 500ms linear forwards;
     }
 
     .orange-btn {
@@ -214,6 +247,6 @@
         width: 40%;
         font-size: 12px;
         margin-top: 10px;
-        animation: anim-pure 500ms linear forwards;
+        animation: anim-pure-2 500ms linear forwards;
     }
 }
