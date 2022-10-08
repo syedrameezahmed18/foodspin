@@ -12,6 +12,11 @@
         .main-logo {
             width: 100px;
             height: 30px;
+
+            @media (min-width:1500px) {
+                width: 120px;
+                height: 38px;
+            }
         }
 
         .desktop-header-left-inner {
@@ -21,6 +26,9 @@
             @include FlexMixin(row, space-between, center);
             p {
                 cursor: pointer;
+                @media (min-width:1500px) {
+                    font-size: 20px;
+                }
             }
         }
     }

@@ -115,7 +115,7 @@
     .giant-circle {
         height: 70%;
         width: 100%;
-        position: absolute;
+         position: absolute;
         background: $light-orange-color;
         border-radius: 50%;
         z-index: -2;
@@ -126,19 +126,12 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
-            transform: translate(-50%, -50%);
+
 
 
             min-width: 500px;
         }
 
-        .wheel-left {
-            animation: 0.5s turnleft linear forwards
-        }
-
-        .wheel-right {
-            animation: 0.5s turnright linear forwards
-        }
     }
     .giant-circle-green {
         height: 70%;
@@ -154,19 +147,13 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
-            transform: translate(-50%, -50%);
+
 
 
             min-width: 500px;
         }
 
-        .wheel-left {
-            animation: 0.5s turnleft linear forwards
-        }
 
-        .wheel-right {
-            animation: 0.5s turnright linear forwards
-        }
     }
 
     .center-dish-div {
@@ -241,18 +228,4 @@
             }
         }
     }
-}
-
-.dish-anim {
-    animation: DishMotion 500ms linear forwards ;
-}
-.dish-anim-2 {
-    animation: DishMotion 500ms linear forwards ;
-}
-
-.dish-anim-alt {
-    animation: DishMotion 500ms linear forwards ;
-}
-.dish-anim-alt-2 {
-    animation: DishMotion 500ms linear forwards ;
 }

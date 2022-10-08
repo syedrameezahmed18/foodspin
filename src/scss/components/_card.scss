@@ -169,18 +169,29 @@
         font-weight: 600;
         color: $orange-color;
         animation: anim-orange 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 45px;
+            font-weight: 600;
+        }
     }
 
     .title {
         font-size: 32px;
         font-weight: 600;
         animation: anim-pure 500ms linear forwards;
-
+        @media (min-width:1500px) {
+            font-size: 46px;
+            font-weight: 600;
+        }
     }
 
     .desc {
         font-size: 14px;
         animation: anim-pure 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 22px;
+            font-weight: 600;
+        }
     }
 
 
@@ -199,6 +210,10 @@
         margin-top: 10px;
 
         animation: anim-pure 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 20px;
+            font-weight: 600;
+        }
     }
 }
 
@@ -220,6 +235,10 @@
         font-weight: 600;
         color: $green-color;
         animation: anim-green 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 45px;
+            font-weight: 600;
+        }
     }
 
 
@@ -227,12 +246,19 @@
         font-size: 32px;
         font-weight: 600;
         animation: anim-pure-2 500ms linear forwards;
-
+        @media (min-width:1500px) {
+            font-size: 46px;
+            font-weight: 600;
+        }
     }
 
     .desc {
         font-size: 14px;
         animation: anim-pure-2 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 22px;
+            font-weight: 600;
+        }
     }
 
     .orange-btn {
@@ -248,5 +274,9 @@
         font-size: 12px;
         margin-top: 10px;
         animation: anim-pure-2 500ms linear forwards;
+        @media (min-width:1500px) {
+            font-size: 20px;
+            font-weight: 600;
+        }
     }
 }
