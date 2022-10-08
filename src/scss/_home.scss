@@ -51,6 +51,74 @@
     }
 }
 
+@keyframes wheelscale {
+    0% {
+        transform: scale(1, 1);
+
+    }
+    13% {
+        transform: scale(0.8, 0.8);
+    }
+    26% {
+        transform: scale(0.5, 0.5);
+    }
+    39% {
+        transform: scale(0.2, 0.5);
+    }
+
+    52% {
+        transform: scale(0, 0);
+    }
+
+    65% {
+        transform: scale(0.2, 0.5);
+    }
+    78% {
+        transform: scale(0.5, 0.5);
+    }
+    90% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+
+    }
+}
+
+@keyframes wheelscale2 {
+    0% {
+        transform: scale(1, 1);
+
+    }
+    13% {
+        transform: scale(0.8, 0.8);
+    }
+    26% {
+        transform: scale(0.5, 0.5);
+    }
+    39% {
+        transform: scale(0.2, 0.5);
+    }
+
+    52% {
+        transform: scale(0, 0);
+    }
+
+    65% {
+        transform: scale(0.2, 0.5);
+    }
+    78% {
+        transform: scale(0.5, 0.5);
+    }
+    90% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+
+    }
+}
+
 @keyframes rotateAxis {
     0% {
         transform: rotateZ(0deg);
@@ -131,6 +199,8 @@
             position: absolute;
             max-width: 650px;
 
+            animation: wheelscale 500ms linear forwards;
+
             @media (min-width:1500px) {
                 height: 40vh;
             }
@@ -152,6 +222,8 @@
             width: 40vw;
             position: absolute;
             max-width: 650px;
+
+            animation: wheelscale2 500ms linear forwards;
 
             @media (min-width:1500px) {
                 height: 40vh;

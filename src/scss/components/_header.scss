@@ -47,6 +47,7 @@
     border-bottom: 3px solid #ddd;
     background: $white-color;
     padding:20px;
+    z-index:4;
     @media (max-width: 800px) {
         border-bottom: 2px solid #eee;
     }
@@ -124,7 +125,7 @@
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
     min-height: 150px;
-
+    z-index:4;
     p {
         height: 20px;
         color:$black-color;

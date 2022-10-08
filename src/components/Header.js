@@ -10,6 +10,7 @@ const Header = () => {
     const { size, setSize } = useContext(ScreenContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+    console.log('menu state is',isMenuOpen)
 
     const DesktopHeader = () => {
         return (
