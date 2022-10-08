@@ -197,7 +197,9 @@
     @include FlexMixin(column, space-around, center);
 
     @media (min-width:1500px) {
-        right:-15vw
+        right:-15vw;
+        width:90vw;
+        top:-95vh;
     }
     .giant-circle {
         height: 70%;
@@ -208,17 +210,22 @@
         z-index: -2;
         @include FlexMixin(row, center, flex-end);
 
+        @media (min-width:1500px) {
+
+        }
+
         .food-wheel {
             align-self: flex-end;
             height: 50vh;
-            width: 40vw;
+            width: 48vw;
             position: absolute;
-            max-width: 650px;
+            // max-width: 750px;
 
             animation: wheelscale 500ms linear forwards;
 
             @media (min-width:1500px) {
-                height: 40vh;
+                height: 55vh;
+
             }
         }
 
@@ -235,14 +242,14 @@
         .food-wheel {
             align-self: flex-end;
             height: 50vh;
-            width: 40vw;
+            width: 48vw;
             position: absolute;
-            max-width: 650px;
+            // max-width: 750px;
 
             animation: wheelscale2 500ms linear forwards;
 
             @media (min-width:1500px) {
-                height: 40vh;
+                height: 55vh;
             }
 
         }
@@ -253,25 +260,23 @@
     .center-dish-div {
         margin-top: 140vh;
         overflow-y:hidden;
-        height: 200px;
-        width: 30vw;
+        height: 40vh;
+        width: 40vw;
         min-width: 250px;
-        max-width: 600px;
-
         @include FlexMixin(row, space-between, flex-end);
 
         @media (min-width: 1500px) {
-            height: 300px;
+
         }
 
         .center-dish {
-            height: 200px;
-            width: 200px;
+            height: 100%;
+            width: 20vw;
             animation: DishMotion 500ms linear forwards;
 
             @media (min-width: 1500px) {
-                height: 300px;
-                width: 300px;
+
+
             }
         }
 
@@ -289,25 +294,25 @@
     .center-dish-div-alt {
         margin-top: 140vh;
         overflow-y:hidden;
-        height: 200px;
-        width: 30vw;
+        height: 40vh;
+        width: 40vw;
         min-width: 250px;
-        max-width: 600px;
+
 
         @include FlexMixin(row, space-between, flex-end);
 
         @media (min-width: 1500px) {
-            height: 300px;
+
         }
 
         .center-dish {
-            height: 200px;
-            width: 200px;
+            height: 100%;
+            width: 20vw;
             animation: DishMotion2 500ms linear forwards;
 
             @media (min-width: 1500px) {
-                height: 300px;
-                width: 300px;
+
+
             }
         }
 
