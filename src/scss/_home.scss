@@ -1,5 +1,21 @@
 .home {
     z-index: 0;
+
+    @media (max-width:600px) {
+        background: $light-orange-color;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+.home-green {
+    z-index: 0;
+
+    @media (max-width:600px) {
+        background: $light-green-color;
+        height: 100vh;
+        width: 100vw;
+    }
 }
 .text-abs {
     position: absolute;

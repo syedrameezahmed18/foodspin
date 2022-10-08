@@ -69,7 +69,7 @@ const Home = () => {
   }
 
   return (
-    <div className='home'>
+    <div className={`${currentCard === 0 ? 'home':'home-green'}`}>
       <Header />
       <Card {...foodData[currentCard]} />
       {
