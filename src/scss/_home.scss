@@ -39,6 +39,17 @@
         transform: scale(1);
     }
 }
+@keyframes DishMotion2 {
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 @keyframes rotateAxis {
     0% {
@@ -175,16 +186,43 @@
         .center-dish {
             height: 200px;
             width: 200px;
-
+            animation: DishMotion 500ms linear forwards;
 
             @media (min-width: 1500px) {
                 height: 300px;
                 width: 300px;
             }
         }
-        .center-dish-alt {
+
+        img {
+            height: 60px;
+            width: 60px;
+            cursor: pointer;
+
+            @media (min-width: 1500px) {
+                height: 90px;
+                width: 90px;
+            }
+        }
+    }
+    .center-dish-div-alt {
+        margin-top: 140vh;
+        overflow-y:hidden;
+        height: 200px;
+        width: 30vw;
+        min-width: 250px;
+        max-width: 600px;
+
+        @include FlexMixin(row, space-between, flex-end);
+
+        @media (min-width: 1500px) {
+            height: 300px;
+        }
+
+        .center-dish {
             height: 200px;
             width: 200px;
+            animation: DishMotion2 500ms linear forwards;
 
             @media (min-width: 1500px) {
                 height: 300px;

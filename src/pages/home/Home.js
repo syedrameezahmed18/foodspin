@@ -75,13 +75,13 @@ const Home = () => {
         <div className={`${currentCard === 0 ?'giant-circle':'giant-circle-green' }`}>
           <img src={FoodWheelImg} className={`food-wheel ${currentCard === 0 ? 'wheel-left':'wheel-right'}`} />
         </div>
-        <div className='center-dish-div'>
+        <div className={`${currentCard === 0 ? 'center-dish-div':'center-dish-div-alt'}`}>
           <img onClick={toggler} src={currentCard === 0 ?ToggleImg:ToggleGreen} />
           {
             currentCard === 0 ? (
               <img ref={DishRef} src={Dish1} className={`center-dish`} />
             ):(
-              <img ref={DishRef2} src={Dish2} className={`center-dish-alt ${currentCard === 0 ? 'dish-anim':'dish-anim-alt'}`} />
+              <img ref={DishRef2} src={Dish2} className={`center-dish`} />
             )
           }
 
