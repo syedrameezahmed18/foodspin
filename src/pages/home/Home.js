@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext,useRef } from 'react'
 import Card from '../../components/Card'
 import Header from '../../components/Header'
-import Dish1 from '../../assets/images/dish1.png'
+import Dish1 from '../../assets/images/dish3.png'
+import Dish2 from '../../assets/images/dish2.png'
 import ToggleImg from "../../assets/images/toggle.png"
+import ToggleGreen from "../../assets/images/togglegreen.png"
 import FoodWheelImg from "../../assets/images/foodwheel.png"
 import { ThemeContext } from '../../context/ThemeContext'
 
@@ -27,6 +29,9 @@ const Home = () => {
   ])
 
   const [currentCard, setCurrentCard] = useState(0)
+  const DishRef = useRef(null)
+  const DishRef2 = useRef(null)
+
 
   useEffect(() => {
     const Interval = setInterval(() => {
@@ -38,7 +43,7 @@ const Home = () => {
         currIndex = 0
       }
       setCurrentCard(currIndex)
-    }, 8000)
+    }, 5000)
 
     return () => {
       clearInterval(Interval)
@@ -47,6 +52,18 @@ const Home = () => {
 
   console.log('theme is', themeColor, 'curr os',currentCard)
 
+  const toggler = () => {
+    if(currentCard === 0) {
+      setCurrentCard(1)
+      DishRef.current.classList.remove("dish-anim")
+      DishRef2.current.classList.add("dish-anim")
+    }
+    else {
+      setCurrentCard(0)
+      DishRef.current.classList.add("dish-anim")
+      DishRef2.current.classList.remove("dish-anim")
+    }
+  }
 
   return (
     <div className='home'>
@@ -56,12 +73,19 @@ const Home = () => {
       {/*Absolute Designs */}
       <div className="major-abs">
         <div className={`${currentCard === 0 ?'giant-circle':'giant-circle-green' }`}>
-          <img src={FoodWheelImg} className='food-wheel' />
+          <img src={FoodWheelImg} className={`food-wheel ${currentCard === 0 ? 'wheel-left':'wheel-right'}`} />
         </div>
         <div className='center-dish-div'>
-          <img src={ToggleImg} />
-          <img src={Dish1} className='center-dish' />
-          <img src={ToggleImg} />
+          <img onClick={toggler} src={currentCard === 0 ?ToggleImg:ToggleGreen} />
+          {
+            currentCard === 0 ? (
+              <img ref={DishRef} src={Dish1} className={`center-dish`} />
+            ):(
+              <img ref={DishRef2} src={Dish2} className={`center-dish-alt ${currentCard === 0 ? 'dish-anim':'dish-anim-alt'}`} />
+            )
+          }
+
+          <img onClick={toggler} src={currentCard === 0 ?ToggleImg:ToggleGreen} />
         </div>
       </div>
     </div>

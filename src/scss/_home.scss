@@ -7,6 +7,39 @@
     left: 10%;
 }
 
+@keyframes turnleft {
+    from {
+        transform: rotate(0deg);
+
+    }
+    to {
+        transform: rotate(20deg);
+
+    }
+}
+@keyframes turnright {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+
+
+@keyframes DishMotion {
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @keyframes rotateAxis {
     0% {
         transform: rotateZ(0deg);
@@ -82,10 +115,18 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
-            transform: translate(-50%, -50%) ;
+            transform: translate(-50%, -50%);
 
-            animation: 2s anim2 linear infinite;
+
             min-width: 500px;
+        }
+
+        .wheel-left {
+            animation: 0.5s turnleft linear forwards
+        }
+
+        .wheel-right {
+            animation: 0.5s turnright linear forwards
         }
     }
     .giant-circle-green {
@@ -102,20 +143,28 @@
             height: 50vh;
             width: 40vw;
             position: absolute;
-            transform: translate(-50%, -50%) ;
+            transform: translate(-50%, -50%);
 
-            animation: 2s anim2 linear infinite;
+
             min-width: 500px;
+        }
+
+        .wheel-left {
+            animation: 0.5s turnleft linear forwards
+        }
+
+        .wheel-right {
+            animation: 0.5s turnright linear forwards
         }
     }
 
     .center-dish-div {
         margin-top: 140vh;
-
+        overflow-y:hidden;
         height: 200px;
-        width: 40vw;
-        min-width: 300px;
-        max-width: 700px;
+        width: 30vw;
+        min-width: 250px;
+        max-width: 600px;
 
         @include FlexMixin(row, space-between, flex-end);
 
@@ -127,6 +176,16 @@
             height: 200px;
             width: 200px;
 
+
+            @media (min-width: 1500px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
+        .center-dish-alt {
+            height: 200px;
+            width: 200px;
+
             @media (min-width: 1500px) {
                 height: 300px;
                 width: 300px;
@@ -134,14 +193,22 @@
         }
 
         img {
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
             cursor: pointer;
 
             @media (min-width: 1500px) {
-                height: 100px;
-                width: 100px;
+                height: 90px;
+                width: 90px;
             }
         }
     }
+}
+
+.dish-anim {
+    animation: DishMotion 500ms linear forwards ;
+}
+
+.dish-anim-alt {
+    animation: DishMotion 500ms linear forwards ;
 }

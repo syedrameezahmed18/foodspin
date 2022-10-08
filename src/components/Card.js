@@ -6,7 +6,7 @@ const Card = ({id,price, title, description}) => {
         <p className={'o-price'}>{price}</p>
         <p className="title">{title}</p>
         <p className="desc">{description}</p>
-        <p className={'orange-btn'}>ORDER NOW</p>
+        <p className={'orange-btn'} style={{cursor:"pointer"}}>ORDER NOW</p>
     </div>
   )
 }
